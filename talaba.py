@@ -27,3 +27,4 @@
 # user1 = User('Shavkatjon','Mirzavaliyev','shavkatziyo@mail.com',934954500)
 # user1.all_info()
 # user1.name_uz()
+nnnnnnnn
