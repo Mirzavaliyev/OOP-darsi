@@ -90,37 +90,52 @@
 # #         return self.hona.hona_info()
 # # hona1 = Hona('140kv','qizil','13 ta')
 # # uy1 = Uy(hona1)
-# # print(uy1.uy_info())
-class Kitob:
-    def __init__(self,nomi,muallifi,narxi):
-        self.nomi = nomi
-        self.muallifi = muallifi
-        self.narxi = narxi
-    def kitob_info(self):
-        return (f"Kitob nomi: {self.nomi}"
-                f"Kitob muallifi: {self.muallifi}"
-                f"Kitob narxi: {self.narxi}")
-class Kutubxona:
-    def __init__(self,nom):
-        self.nom = nom
-        self.kitoblar = []
-    def kitob_qoshish(self,kitob):
-        """Bu yerda kitob qoshamiz"""
-        self.kitoblar.append(kitob)
-    def kutubxona_info(self):
-        """Bu yerda kutubxona malumotlari"""
-        info = "Kitob xaqidagi malumotlar"
-        for kitob in self.kitoblar:
-            info += kitob.kitob_info() + "\n"
-        return info
-# Kitob obyektlari yaratish
-kitob1 = Kitob('Hamza', 'Alisher Navoiy', '300 ming')
-kitob2 = Kitob('O‘tkan kunlar', 'Abdulla Qodiriy', '400 ming')
-kitob3 = Kitob('Javohirlar xazinasi', 'Zahiriddin Muhammad Bobur', '500 ming')
-kutubxona1 = Kutubxona('Shaxrisabz kutubxonasi')
-kutubxona1.kitob_qoshish(kitob1)
-kutubxona1.kitob_qoshish(kitob2)
-kutubxona1.kitob_qoshish(kitob3)
-print(kutubxona1.kutubxona_info())
+# # # print(uy1.uy_info())
+# class Kitob:
+#     def __init__(self,nomi,muallifi,narxi):
+#         self.nomi = nomi
+#         self.muallifi = muallifi
+#         self.narxi = narxi
+#     def kitob_info(self):
+#         return (f"Kitob nomi: {self.nomi}"
+#                 f"Kitob muallifi: {self.muallifi}"
+#                 f"Kitob narxi: {self.narxi}")
+# class Kutubxona:
+#     def __init__(self,nom):
+#         self.nom = nom
+#         self.kitoblar = []
+#     def kitob_qoshish(self,kitob):
+#         """Bu yerda kitob qoshamiz"""
+#         self.kitoblar.append(kitob)
+#     def kutubxona_info(self):
+#         """Bu yerda kutubxona malumotlari"""
+#         info = "Kitob xaqidagi malumotlar"
+#         for kitob in self.kitoblar:
+#             info += kitob.kitob_info() + "\n"
+#         return info
+# # Kitob obyektlari yaratish
+# kitob1 = Kitob('Hamza', 'Alisher Navoiy', '300 ming')
+# kitob2 = Kitob('O‘tkan kunlar', 'Abdulla Qodiriy', '400 ming')
+# kitob3 = Kitob('Javohirlar xazinasi', 'Zahiriddin Muhammad Bobur', '500 ming')
+# kutubxona1 = Kutubxona('Shaxrisabz kutubxonasi')
+# kutubxona1.kitob_qoshish(kitob1)
+# kutubxona1.kitob_qoshish(kitob2)
+# kutubxona1.kitob_qoshish(kitob3)
+# print(kutubxona1.kutubxona_info())
+# class Eksponat:
+#     def __init__(self,nomi,yili,qiymati):
+#         self.nomi = nomi
+#         self.yili = yili
+#         self.qiymati = qiymati
+#     def eksponat_info(self):
+#         return (f"Eksponat nomi: {self.nomi}"
+#                 f"\nEksponat yili: {self.yili}"
+#                 f"\nEksponat qiymati: {self.qiymati}")
+# class Muzey:
+#     def __init__(self,nom):
+#         self.nom = nom
+#     def muzey_info(self):
+#
+
 
 
