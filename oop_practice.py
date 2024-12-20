@@ -73,39 +73,59 @@
 #
 # # Hisob ma'lumotlarini chiqarish
 # print(hisob.info())
-class Talaba:
-    def __init__(self,ismi,yoshi,kursi=1):
-        self.ismi = ismi
-        self.yoshi = yoshi
-        self.kursi = kursi
-    def info(self):
-        return (f"Talabaning ismi {self.ismi}"
-                f"\nTalabaning yoshi {self.yoshi}"
-                f"\nTalabaning kursi {self.kursi}")
-    def kurs_oshir(self,bosqich):
-        if 1 <= self.kursi < 4:
-            self.kursi += 1
-        else:
-            print('Talaba allaqchon 4-kursda')
-    def kurs_belgilash(self,belgila):
-        if belgila in [1,2,3,4]:
-            self.kursi += belgila
-        else:
-            print("Siz 1 dan 4 gacha raqam kirita olasiz")
-# Talaba obyektini yaratamiz
-talaba1 = Talaba("Shavkatjon", 20)
+# class Talaba:
+#     def __init__(self,ismi,yoshi,kursi=1):
+#         self.ismi = ismi
+#         self.yoshi = yoshi
+#         self.kursi = kursi
+#     def info(self):
+#         return (f"Talabaning ismi {self.ismi}"
+#                 f"\nTalabaning yoshi {self.yoshi}"
+#                 f"\nTalabaning kursi {self.kursi}")
+#     def kurs_oshir(self,bosqich):
+#         if 1 <= self.kursi < 4:
+#             self.kursi += 1
+#         else:
+#             print('Talaba allaqchon 4-kursda')
+#     def kurs_belgilash(self,belgila):
+#         if belgila in [1,2,3,4]:
+#             self.kursi += belgila
+#         else:
+#             print("Siz 1 dan 4 gacha raqam kirita olasiz")
+# # Talaba obyektini yaratamiz
+# talaba1 = Talaba("Shavkatjon", 20)
+#
+# # Ma'lumotlarni chop qilish
+# print(talaba1.info())
+#
+#
+#
+# # Notog‘ri kursni belgilang
+# talaba1.kurs_belgilash(5)  # Xato chiqadi
+#
+# # To‘g‘ri kursni belgilang
+# talaba1.kurs_belgilash(3)
+# print(talaba1.info())
+class Doira:
+    doira_soni = 0
+    def __init__(self,radius):
+        self.radius = radius
+        Doira.doira_soni += 1
+    def diametr(self):
+        return self.radius * 2
+    @classmethod
+    def yangi_doira(cls,diametr):
+        return cls(diametr / 2)
+    @staticmethod
+    def yuzasi(radius):
+        import math
+        math.pi*radius**2
 
-# Ma'lumotlarni chop qilish
-print(talaba1.info())
+doira = Doira(200)
+print(doira.diametr())
+doira2 = Doira.yangi_doira(400)
+print(f"Doiraning radiusi {doira2.radius}")
 
-
-
-# Notog‘ri kursni belgilang
-talaba1.kurs_belgilash(5)  # Xato chiqadi
-
-# To‘g‘ri kursni belgilang
-talaba1.kurs_belgilash(3)
-print(talaba1.info())
 
 
 
