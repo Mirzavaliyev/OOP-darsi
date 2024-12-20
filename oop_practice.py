@@ -38,41 +38,74 @@
 # fan1 = Fan('Fizika',300)
 # talaba1 = Talaba('Shaxnoz','Valiyeva', fan1)
 # print(talaba1.info())
-class BankXisobi():
-    def __init__(self,hisob_raqam,balans):
-        self.__hisob_raqam = hisob_raqam
-        self.__balans = balans
-    def balans_olish(self):
-        return (f"Sizning hisobingiz {self.__balans}")
-    def balans_qosh(self,miqdor):
-        if miqdor > 0:
-            self.__balans += miqdor
-        else:
-            print("0 dan katta raqam kiriting")
-    def yechib_ol(self,miqdor1):
-        if self.__balans > miqdor1:
-            self.__balans -= miqdor1
-        else:
-            print('Balansda buncha miqdorda pul yoq')
+# class BankXisobi():
+#     def __init__(self,hisob_raqam,balans):
+#         self.__hisob_raqam = hisob_raqam
+#         self.__balans = balans
+#     def balans_olish(self):
+#         return (f"Sizning hisobingiz {self.__balans}")
+#     def balans_qosh(self,miqdor):
+#         if miqdor > 0:
+#             self.__balans += miqdor
+#         else:
+#             print("0 dan katta raqam kiriting")
+#     def yechib_ol(self,miqdor1):
+#         if self.__balans > miqdor1:
+#             self.__balans -= miqdor1
+#         else:
+#             print('Balansda buncha miqdorda pul yoq')
+#     def info(self):
+#         return (f"Hisob raqam {self.__hisob_raqam}"
+#                 f"\nBalans {self.__balans}")
+# hisob = BankXisobi("987654321", 100000)
+#
+# # Balansni olish
+# print(hisob.balans_olish())  # 100000
+#
+# # Depozit kiritish
+# hisob.balans_qosh(50000)
+# print(hisob.balans_olish())  # 150000
+#
+# # Hisobdan pul yechish
+# hisob.yechib_ol(200000)  # Xato: Balans yetarli emas
+# hisob.yechib_ol(30000)
+# print(hisob.balans_olish())  # 120000
+#
+# # Hisob ma'lumotlarini chiqarish
+# print(hisob.info())
+class Talaba:
+    def __init__(self,ismi,yoshi,kursi=1):
+        self.ismi = ismi
+        self.yoshi = yoshi
+        self.kursi = kursi
     def info(self):
-        return (f"Hisob raqam {self.__hisob_raqam}"
-                f"\nBalans {self.__balans}")
-hisob = BankXisobi("987654321", 100000)
+        return (f"Talabaning ismi {self.ismi}"
+                f"\nTalabaning yoshi {self.yoshi}"
+                f"\nTalabaning kursi {self.kursi}")
+    def kurs_oshir(self,bosqich):
+        if 1 <= self.kursi < 4:
+            self.kursi += 1
+        else:
+            print('Talaba allaqchon 4-kursda')
+    def kurs_belgilash(self,belgila):
+        if belgila in [1,2,3,4]:
+            self.kursi += belgila
+        else:
+            print("Siz 1 dan 4 gacha raqam kirita olasiz")
+# Talaba obyektini yaratamiz
+talaba1 = Talaba("Shavkatjon", 20)
 
-# Balansni olish
-print(hisob.balans_olish())  # 100000
+# Ma'lumotlarni chop qilish
+print(talaba1.info())
 
-# Depozit kiritish
-hisob.balans_qosh(50000)
-print(hisob.balans_olish())  # 150000
 
-# Hisobdan pul yechish
-hisob.yechib_ol(200000)  # Xato: Balans yetarli emas
-hisob.yechib_ol(30000)
-print(hisob.balans_olish())  # 120000
 
-# Hisob ma'lumotlarini chiqarish
-print(hisob.info())
+# Notog‘ri kursni belgilang
+talaba1.kurs_belgilash(5)  # Xato chiqadi
+
+# To‘g‘ri kursni belgilang
+talaba1.kurs_belgilash(3)
+print(talaba1.info())
 
 
 
