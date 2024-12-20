@@ -105,27 +105,40 @@
 #
 # # To‘g‘ri kursni belgilang
 # talaba1.kurs_belgilash(3)
-# print(talaba1.info())
-class Doira:
-    doira_soni = 0
-    def __init__(self,radius):
-        self.radius = radius
-        Doira.doira_soni += 1
-    def diametr(self):
-        return self.radius * 2
-    @classmethod
-    def yangi_doira(cls,diametr):
-        return cls(diametr / 2)
-    @staticmethod
-    def yuzasi(radius):
-        import math
-        math.pi*radius**2
-
-doira = Doira(200)
-print(doira.diametr())
-doira2 = Doira.yangi_doira(400)
-print(f"Doiraning radiusi {doira2.radius}")
-
+# # print(talaba1.info())
+# class Doira:
+#     doira_soni = 0
+#     def __init__(self,radius):
+#         self.radius = radius
+#         Doira.doira_soni += 1
+#     def diametr(self):
+#         return self.radius * 2
+#     @classmethod
+#     def yangi_doira(cls,diametr):
+#         return cls(diametr / 2)
+#     @staticmethod
+#     def yuzasi(radius):
+#         import math
+#         math.pi*radius**2
+#
+# doira = Doira(200)
+# print(doira.diametr())
+# doira2 = Doira.yangi_doira(400)
+# print(f"Doiraning radiusi {doira2.radius}")
+class Hayvon:
+    hayvonlar_soni = 0
+    def __init__(self,ism,yoshi,turi):
+        self.ism = ism
+        self.yoshi = yoshi
+        self.turi = turi
+    def info(self):
+        return (f"Hayvon ism {self.ism}"
+                f"Hayvon yoshi {self.yoshi}"
+                f"Hayvon turi {self.turi}")
+    def ovqatlan(self):
+        return (f"{self.ism} ovqatlanyapti")
+hayvon1 = Hayvon('Sara',5,'Mushuk')
+print(hayvon1.ovqatlan())
 
 
 
