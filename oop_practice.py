@@ -156,7 +156,13 @@ class Number:
 n1 = Number(9)
 n2 = Number(8)
 print(n1 + n2)
-
+class Customlist:
+    def __init__(self,items):
+        self.items = items
+    def __len__(self):
+        return len(self.items)
+cl = Customlist[1,2,3,4,5,67,4]
+print(len(cl))
 
 
 
