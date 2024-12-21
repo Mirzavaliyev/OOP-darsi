@@ -139,14 +139,23 @@
 #         return (f"{self.ism} ovqatlanyapti")
 # hayvon1 = Hayvon('Sara',5,'Mushuk')
 # print(hayvon1.ovqatlan())
-class Book:
-    def __init__(self,nomi,mualifi):
-        self.nomi = nomi
-        self.mualifi = mualifi
-    def __str__(self):
-         return (f"{self.nomi} by {self.mualifi}")
-p = Book('Hamza', "Alisher Navoiy")
-print(p)
+#Buirinchi masala
+# class Book:
+#     def __init__(self,nomi,mualifi):
+#         self.nomi = nomi
+#         self.mualifi = mualifi
+#     def __str__(self):
+#          return (f"{self.nomi} by {self.mualifi}")
+# p = Book('Hamza', "Alisher Navoiy")
+# print(p)
+class Number:
+    def __init__(self,value):
+        self.value = value
+    def __ad__(self,other):
+        return self.value + other.value
+n1 = Number(9)
+n2 = Number(8)
+print(n1 + n2)
 
 
 
